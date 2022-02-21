@@ -72,6 +72,10 @@
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
     "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
+    "watch_": "webpack --config configuration/webpack.dev.config.js --mode=development --watch & cd dist/ ; localserver ",
+    "parcel": "parcel ./index.html",
+    "parcel_": "parcel watch ./index.html",
+    "parcel_builder": "parcel build --public-url ./ ./index.html --experimental-scope-hoisting --out-dir build",
     "bundle": "npm install && npm run watch",
     "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
     "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
